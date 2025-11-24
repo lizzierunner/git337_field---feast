@@ -21,6 +21,12 @@
     --font-head: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
 
+    /* SPACING */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+
     --radius: 10px;
 }
 /* GLOBAL STYLES(mobile first/ small) */
@@ -49,67 +55,61 @@ section + section {
     padding-top: 0;
 
 }
-/*HEADER STYLES*/
+/* Header */
 header {
-    background: var(--midnight-blue);
-    color: white;
-    padding-top: 2rem;
+    background-color: var(--navy-dark);
+    color: var(--white);
+    text-align: center;
 }
 
+.header-top {
+    padding: var(--spacing-lg) var(--spacing-sm);
+}
 
-    .header-top {
-        display: grid;
-        justify-items: center;
-        gap: 0.5rem;
-        padding-bottom: 1rem;
-    }
-    .header-top h1 {
-        font-family: var(--font-head);
-        font-weight: 700;
-        font-size: clamp(2rem, 5vw, 3.25rem);
-        letter-spacing: 0.5px;
-    }
-    .header-top .logo {
-        max-width: 80px;
-        height: auto;
-    }
-    .header-top .tagline {
-        font-style: italic;
-        opacity: 0.09;
-    }
-    /*NAVIGATION STYLES*/
-    nav {
-        background: var(--champagne-gold);
-        border-bottom: 1px solid #e6d2a9;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: clamp(0.75rem, 3vw, 1.25rem);
-        padding: 0.75rem 0;
-        margin: 0;
-    }
-    nav a {
-        text-decoration: none;
-        color: var(--dark-charcoal);
-        font-weight: 700;
-        line-height: 1;
-        padding: 0.5rem 0.75rem;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    }
-    /*hover and keyboard focus styles*/
-    nav a:hover,
-    nav a:focus {
-        text-decoration: underline;
-        background:rgba(255, 255, 255, 0.3);
-        outline: 2px solid transparent;
-    }
-    /*active/selected link styles*/
-    nav a[aria-current="page"] {
-        text-decoration: underline;
-    }
+.logo {
+    max-width: 120px;
+    margin: 0 auto var(--spacing-sm);
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: var(--spacing-xs);
+    color: var(--white);
+}
+
+.tagline {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--gold-tan);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: var(--spacing-sm) 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    color: var(--navy-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    padding: var(--spacing-xs);
+    text-align: center;
+}
 
     /*HEADINGS & LEAD TEXT*/
     h2 {
@@ -129,38 +129,36 @@ header {
 
     }
     /*OFFERINGS GRID + CARDS*/
-    .offerings {
-        display: grid;
-        gap: 1.25rem;
-        margin-top: 1rem;
-    }
-    .offering-card {
-        background: var(--olive-green);
-        color: #fff;
-        padding: 1.5rem;
-        border-radius: var(--radius);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+.offerings {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--off-white);
+}
 
-    }
-    .offering-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    .offering-card h3 {
-        font-family: var(--font-head);
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        font-size: clamp(1.25rem, 3vw, 1.4rem);
-    }
-    .offering-card p, .offering-card ul {
-        font-family: var(--font-body);
-        line-height: 1.5;
-    }
-    .offering-card ul {
-        margin-left: 1.25rem;
-        list-style-type: disc;
-    }
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.offering-card {
+    background-color: var(--green-olive);
+    color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.monthly-basket {
+    background-color: var(--green-olive);
+    color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.monthly-basket ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-md);
+}
     /*GALLERY*/
     .gallery {
         display: grid;
@@ -259,12 +257,6 @@ header {
     section {
         padding: 2rem 1.5rem;
     }
-    /*Offerings: 2 columns*/
-    .offerings {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-
-    } 
     /*Gallery: 2 columns*/
     .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -291,21 +283,12 @@ header {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
-    /*Cards get more padding*/
-    .offering-card {
-        padding: 2rem;
-    }
 }
 /* Media queries (extra large) */
 @media (min-width: 1200px) {
     /* Even Wider for large screens */
     .container {
         width: min(85%, 1200px);
-    }
-    /*Offerings: 3 columns*/
-    .offerings {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
     }
     /*Hero section gets centered and constrained*/
     .about {
