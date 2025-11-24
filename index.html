@@ -9,13 +9,13 @@
 </head>
 <body>
     <header class="site-header">
-    <div class="container brand">
+    <div class="header-top">
         <img src="images/fieldandfeast-logo.png" alt="Field & Feast Logo" class="logo" />
         <h1>Field &amp; Feast</h1>
         <p class="tagline">Harvested with Care, Served with Elegance</p>
 
     </div>
-    <nav class="site-nav">
+    <nav>
         <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#offerings">Offerings</a></li>
@@ -24,62 +24,75 @@
 </nav>
 </header>
 <main>
-    <section class="container hero" id="about">
-        <h2 class="section-title">Welcome to Field &amp; Feast</h2>
-        <p class="lead">At Field & Feast, we believe that the finest meals begin at the source. Rooted in tradition yet refined for the modern palate, our farm-to-table philosophy celebrates the beauty of seasonality, sustainability, and craftsmanship.</p>
+    <section id="about" class="container">
+        <h2 class="section-title">About Field &amp; Feast</h2>
+        <article>
+            <p class="lead">At Field &amp; Feast, we believe in the harmony of nature and cuisine. Nestled in the heart of the countryside, our farm-to-table experience offers more than just meals; we provide a connection to the land and its bounty.</p>
+            <p>Our dedicated team cultivates seasonal produce with sustainable practices, ensuring that every ingredient is fresh, flavorful, and responsibly sourced. From our fields to your table, we invite you to savor the essence of each season through our thoughtfully crafted offerings.</p>
+        </article>
     </section>
-
-    <section class="container" id="offerings">
-        <h2 class="section-title">Our Offerings</h2>
-        <div class="offerings">
-            <article class="card">
+    <section id="offerings" class="offerings">
+        <h2>Our Offerings</h2>
+        <article class="offerings-grid">
+            <div class="offering-card">
                 <h3>Artisan Provisions</h3>
                 <p>Hand-selected, seasonal ingredients sourced from our estate farm and trusted local growers.</p>
-            </article>
-            <article class="card">
+            </div>
+            <div class="offering-card">
                 <h3>Exclusive Dining Experiences</h3>
                 <p>Join us for intimate chef-led tastings and farm-to-table feasts highlighting the best of each season.</p>
-            </article>
-            <article class="card">
+            </div>
+            <div class="offering-card">
                 <h3>Field &amp; Feast Monthly Basket</h3>
                 <ul>
-                    <li>Fresh organic fruits and vegetables.</li>
-                    <li>House made preserves and baked goods.</li>
-                    <li>Artisan cheeses and curated extras.</li>
+                    <li><strong>Hand-Harvested Produce:</strong> Fresh organic fruits and vegetables.</li>
+                    <li><strong>Artisan-Crafted Goods:</strong> Cheeses, house-made preserves, and baked goods.</li>
+                    <li><strong>Exclusive Recipes &amp; Pairings:</strong> Thoughtfully designed by our chefs to inspire culinary creativity.</li>
                 </ul>
-            </article>
-        </div>
+                <p>Elevate your home dining with the finest farm-to-table offerings, elegantly packaged and delivered with care.</p>
+            </div>
+        </article>
     </section>
-
-            <section class="container" id="gallery">
+    <section class="container" id="gallery">
         <h2 class="section-title">A Gallery of Field &amp; Feast</h2>
-        <p class="lead">From lush fields to beautifully plated creations, each image tells a story.</p>
-        <div class="gallery">
-            <figure>
-                <img src="images/tomatoes-300w.jpg" alt="Heirloom tomatoes at peak ripeness" />
-                <figcaption>Heirloom tomatoes at peak ripeness</figcaption>
+        <p class="gallery-intro">Experience the elegance and artistry behind Field &amp; Feast through our curated gallery. From lush fields to beautifully plated creations, each image tells a story.</p>
+        <article class="gallery-grid">
+        
+            <figure class ="gallery-item">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/tomatoes-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="images/tomatoes-300w.jpg">
+                    <img src="images/tomatoes-200w.jpg" alt="Heirloom tomatoes at peak ripeness" />
+                </picture>
+                <figcaption>Vibrant heirloom tomatoes, handpicked at peak ripeness.</figcaption>
             </figure>
-            <figure>
-                <img src="images/basket-300w.jpg" alt="Freshly picked produce in our field basket" />
-                <figcaption>Freshly picked produce in our field basket</figcaption>
-            </figure>
-            <figure>
-                <img src="images/table-setting-300w.jpg" alt="Elegant table-scape under the evening sky" />
-                <figcaption>Elegant table-scape under the evening sky</figcaption>
-            </figure>
-            <figure>
-                <img src="images/chef-plating-300w.jpg" alt="Artful plating with seasonal ingredients" />
-                <figcaption>Artful plating with seasonal ingredients</figcaption>
-            </figure>
-            <figure>
-                <img src="images/olive-oil-300w.jpg" alt="Drizzling golden olive oil over fresh harvest." />
+            <figure class ="gallery-item">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="olive-oil-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="olive-oil-300w.jpg">
+                    <img src="images/olive-oil-200w.jpg" alt="Artisan olive oil in rustic setting" />
+                </picture>
                 <figcaption>Drizzling golden olive oil over fresh harvest.</figcaption>
             </figure>
-        </div>
-        <div class="cta">
-            <a href="#gallery" class ="button">View Our Full Gallery</a>
-        </div>
+            <figure class ="gallery-item">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/table-setting-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="images/table-setting-300w.jpg">
+                    <img src="images/table-setting-200w.jpg" alt="Elegant tablescape under the evening sky" />
+                </picture>
+                <figcaption>Artful plating with seasonal ingredients.</figcaption>
+            </figure>
+            <figure class ="gallery-item">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/basket-600w.jpg">
+                    <source media="(min-width: 600px)" srcset="images/basket-300w.jpg">
+                    <img src="images/basket-200w.jpg" alt="Our monthly basket, curated with care" />
+                </picture>
+                <figcaption>Our monthly basket curated with care.</figcaption>
+            </figure>
 
+        </article>
+        <a href="#" class="view-gallery-btn">View Full  Our Gallery</a>
     </section>
 </main>
 <footer class="site-footer">
