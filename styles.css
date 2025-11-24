@@ -1,7 +1,7 @@
 /* CSS BY Elizabeth Johnson */
 /* Imported FONTS */
 /* IMPORTED FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
 
 /* CSS RESET */
 * {
@@ -11,15 +11,15 @@
 }
 /* ROOT VARIABLES */
 :root {
-    --midnight-blue: #1F2A44;
-    --olive-green: #76885B;
-    --champagne-gold: #F6C185;
-    --linen: #EFE4C4;
-    --dark-charcoal: #2B2B2B;
-    --soft-white: #EAF9F6;
+    /* COLORS */
+    --navy-dark: #2c3e50;
+    --gold-tan: #c9a961;
+    --green-olive: #6b8e5f;
+    --white: #ffffff;
+    --text-dark: #333333;
     /*FONTS*/
     --font-head: 'Playfair Display', serif;
-    --font-body: 'Open Sans', sans-serif;
+    --font-body: 'Lato', sans-serif;
 
     --radius: 10px;
 }
@@ -50,39 +50,39 @@ section + section {
 
 }
 /*HEADER STYLES*/
-header.site-header {
+header {
     background: var(--midnight-blue);
     color: white;
     padding-top: 2rem;
 }
 
 
-    .brand {
+    .header-top {
         display: grid;
         justify-items: center;
         gap: 0.5rem;
         padding-bottom: 1rem;
     }
-    .brand h1 {
+    .header-top h1 {
         font-family: var(--font-head);
         font-weight: 700;
         font-size: clamp(2rem, 5vw, 3.25rem);
         letter-spacing: 0.5px;
     }
-    .brand .logo {
+    .header-top .logo {
         max-width: 80px;
         height: auto;
     }
-    .brand .tagline {
+    .header-top .tagline {
         font-style: italic;
         opacity: 0.09;
     }
     /*NAVIGATION STYLES*/
-    nav.site-nav {
+    nav {
         background: var(--champagne-gold);
         border-bottom: 1px solid #e6d2a9;
     }
-    nav.site-nav ul {
+    nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
@@ -90,7 +90,7 @@ header.site-header {
         padding: 0.75rem 0;
         margin: 0;
     }
-    nav.site-nav a {
+    nav a {
         text-decoration: none;
         color: var(--dark-charcoal);
         font-weight: 700;
@@ -100,26 +100,26 @@ header.site-header {
         transition: all 0.3s ease;
     }
     /*hover and keyboard focus styles*/
-    nav.site-nav a:hover,
-    nav.site-nav a:focus {
+    nav a:hover,
+    nav a:focus {
         text-decoration: underline;
         background:rgba(255, 255, 255, 0.3);
         outline: 2px solid transparent;
     }
     /*active/selected link styles*/
-    nav.site-nav a[aria-current="page"] {
+    nav a[aria-current="page"] {
         text-decoration: underline;
     }
 
     /*HEADINGS & LEAD TEXT*/
-    .section-title {
+    h2 {
         font-family: var(--font-head);
         font-weight: 700;
         font-size: clamp(1.5rem, 4vw, 2.5rem);
         margin-bottom: 0.75rem;
         color: var(--midnight-blue);
     }
-    .lead {
+    .gallery-intro {
         font-family: var(--font-body);
         color: #555;
         font-size: clamp(0.95rem, 2vw, 1.1rem);
@@ -134,7 +134,7 @@ header.site-header {
         gap: 1.25rem;
         margin-top: 1rem;
     }
-    .card {
+    .offering-card {
         background: var(--olive-green);
         color: #fff;
         padding: 1.5rem;
@@ -143,21 +143,21 @@ header.site-header {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     }
-    .card:hover {
+    .offering-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-    .card h3 {
+    .offering-card h3 {
         font-family: var(--font-head);
         font-weight: 700;
         margin-bottom: 0.75rem;
         font-size: clamp(1.25rem, 3vw, 1.4rem);
     }
-    .card p, .card ul {
+    .offering-card p, .offering-card ul {
         font-family: var(--font-body);
         line-height: 1.5;
     }
-    .card ul {
+    .offering-card ul {
         margin-left: 1.25rem;
         list-style-type: disc;
     }
@@ -207,7 +207,7 @@ header.site-header {
         text-align: center;
         margin-top: 1.5rem;
     }
-    .cta .button {
+    .cta .view-gallery-btn {
         display: inline-block;
         background: var(--olive-green);
         color: #fff;
@@ -219,14 +219,14 @@ header.site-header {
         transition: all 0.3s ease;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    .cta .button:hover,
-    .cta .button:focus {
+    .cta .view-gallery-btn:hover,
+    .cta .view-gallery-btn:focus {
         background: var(--midnight-blue);
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     /*FOOTER */
-    footer.site-footer {
+    footer {
         background: var(--midnight-blue);
         color: #fff;
         text-align: center;
@@ -234,25 +234,25 @@ header.site-header {
         margin-top: 1rem;
         font-size: 0.95rem;
     }
-    .site-footer .social a {
+    footer .social a {
         color: #fff;
         margin: 0 0.5rem;
         text-decoration: none;
     }
-    .site-footer .social a:hover,
-    .site-footer .social a:focus {
+    footer .social a:hover,
+    footer .social a:focus {
         text-decoration: underline;
     }
-    footer.site-footer {
+    footer {
         border-top: 6px solid var(--champagne-gold);
     }
     /*media queries(medium)*/
 @media (min-width: 600px) {
     /*Header spacing adjustment*/
-    header.site-header {
+    header {
         padding-top: 2.5rem;
     }
-    .brand .logo {
+    .header-top .logo {
         max-width: 100px;
     }
     /*Section padding increase*/
@@ -279,10 +279,10 @@ header.site-header {
         width: min(90%, 1100px); 
     }
     /*Header spacing adjustment*/
-    header.site-header {
+    header {
         padding-top: 3rem;
     }
-    .brand .logo {
+    .header-top .logo {
         max-width: 120px;
     }
 
@@ -292,7 +292,7 @@ header.site-header {
         gap: 2rem;
     }
     /*Cards get more padding*/
-    .card {
+    .offering-card {
         padding: 2rem;
     }
 }
@@ -308,11 +308,11 @@ header.site-header {
         gap: 2rem;
     }
     /*Hero section gets centered and constrained*/
-    .hero {
+    .about {
         text-align: center;
         
     }
-    .hero .lead {
+    .about .gallery-intro {
         margin-left: auto;
         margin-right: auto;
     }
