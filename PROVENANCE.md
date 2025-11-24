@@ -1,31 +1,22 @@
-# Provenance & Authorship — Field & Feast  
-**Author:** Elizabeth Johnson  
-**Course:** GIT 337  
+Field & Feast — GIT 337
+Author: Elizabeth Johnson
 
-## 🧩 Original Work
-All of the following were created entirely by me:
-- HTML structure
-- CSS styling (mobile-first, responsive, spacing)
-- Gallery layout and interactions
-- Mockups and design decisions
-- All written copy and alt text
+This project was built from my own wireframes and mockups for GIT 337.
+All layout, structure, HTML, CSS, and gallery work was created by me.
 
-## 🖼 Assets
-- Images in `/images` are either:  
-  • Photos I selected from royalty-free sources, or  
-  • Provided assets for the assignment  
-- Mockups in `/mockups` were designed by me.
-
-(If any image needs attribution, list it here:  
-**Example:** “Image 3 — Unsplash / Photographer Name / License”)
-
-## ⚙️ Tools & AI Usage
-- I used VS Code and GitHub for development.  
-- **No AI tools were used to generate the code or written content.**  
-- Any automated suggestions (like spellcheckers or linters) were manually reviewed and edited by me.
-
-## 📅 Work Log
-- Nov 10–11: Wireframes + mockups  
-- Nov 12: HTML/CSS base  
-- Nov 13: Gallery + responsive work  
-- Nov 14: Cleanup, images, and documentation  
+📌 What I Built
+Mobile-first site structure
+Custom CSS grid and spacing system
+Image gallery section
+My own alt text, page copy, and image selection
+Mockups and visual design decisions
+🛠 How I Built It (Process)
+Nov 10–11: Created wireframes and exported mockups (see /mockups folder)
+Nov 12: Built initial HTML and mobile CSS
+Nov 13: Added gallery section + responsive layout
+Nov 14: Accessibility pass + final content polish
+🧰 Tools Used
+VS Code
+Git + GitHub
+No AI-generated code or AI-written copy was used.
+Any suggestions I reviewed (such as spelling/formatting tools) were manually edited by me.
